@@ -65,7 +65,7 @@ export default function Home() {
           <section id="contact" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
             <h2 className="text-3xl font-bold mb-4">Contact</h2>
             <ul className="list-disc list-inside">
-              <li>Contact : 9444752159</li>
+      
               <li>Email : madhavm350@gmail.com</li>
             </ul>
           </section>
