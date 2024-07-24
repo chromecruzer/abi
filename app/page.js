@@ -71,7 +71,7 @@ export default function Home() {
           </section>
           <section id="linkedin" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200 flex items-center">
             <h2 className="text-3xl font-bold mb-4 flex-grow">Connect with me on LinkedIn ▶️▶️</h2>
-            <a href="https://www.linkedin.com/in/madhavm" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/madhav-m-133b53198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
               <Image
                 src="https://th.bing.com/th/id/OIP.uyPcqkvOrqSM1TuUiA3_8QHaHa?rs=1&pid=ImgDetMain"
                 alt="LinkedIn Logo"
