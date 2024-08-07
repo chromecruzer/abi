@@ -9,6 +9,7 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'media.licdn.com' },
       { protocol: 'https', hostname: 'th.bing.com' },
+      { protocol: 'https', hostname: 'i.ibb.co' },
     ],
   },
 };

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-600 text-white p-4 text-center">
       <h1 className="text-4xl font-bold">
-      Madhav M <sup className="text-sm">He/Him</sup>
+      Abirami A <sup className="text-sm">She/Her</sup>
       </h1>
       <nav className="mt-4 flex justify-center space-x-6">
         <a href="#about" className="text-white text-lg">About Me</a>
