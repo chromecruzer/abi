@@ -23,22 +23,14 @@ export default function Home() {
           <section id="about" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
             <h2 className="text-3xl font-bold mb-4">OBJECTIVE</h2>
             <p className="leading-relaxed text-lg">
-            Seeking a dynamic career in digital marketing with a focus on SEO optimization. Dedicated to continuous learning, leveraging strong communication, time management, and critical thinking skills to drive organizational success through proactive support and effective collaboration.
+              Seeking a dynamic career in digital marketing with a focus on SEO optimization. Dedicated to continuous learning, leveraging strong communication, time management, and critical thinking skills to drive organizational success through proactive support and effective collaboration.
             </p>
           </section>
           <section id="projects" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
             <h2 className="text-3xl font-bold mb-4">PROJECTS</h2>
             <ProjectCard
-              title="Brain tumour detection"
-              description="Detection of brain tumour using MATLAB software"
-            />
-            <ProjectCard
-              title="Pressure ulcer classification"
-              description="Pressure ulcer classification using deep learning"
-            />
-            <ProjectCard
-              title="Automated microscope for magnifying skin surface"
-              description="Programmed step movement of microscope across X and Y axes to capture images"
+              title="Wireless Transfer of Energy for Electric vehicles"
+              description="Wireless Energy Transfer for Electric Vehicles: Utilizing coils for dynamic energy transfer, this system collects energy from vehicles in motion, storing it in capacitors for immediate use."
             />
           </section>
           <section id="education" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
@@ -71,7 +63,7 @@ export default function Home() {
           <section id="languages" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
             <h2 className="text-3xl font-bold mb-4">LANGUAGES</h2>
             <p className="leading-relaxed text-lg">
-              Proficient in Tamil and English. Speaking in Telugu. Reading in Hindi.
+              Proficient in Tamil and English.
             </p>
           </section>
           <section id="courses" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
@@ -100,7 +92,7 @@ export default function Home() {
               />
             </a>
           </section>
-          <ContactForm /> 
+          <ContactForm />
         </main>
         <footer className="bg-gray-900 text-gray-200 text-center p-4 shadow-inner">
           <p>© 2024 Abirami A. All rights reserved.</p>
