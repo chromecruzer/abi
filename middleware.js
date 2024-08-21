@@ -225,8 +225,87 @@
 
 // this is the right one Nigga 
 
+// import { NextResponse } from 'next/server';
+
+// const excludeIPs = new Set([
+//   '189.240.60.164',
+//   '50.175.212.76',
+//   '50.144.166.226',
+//   '50.231.104.58',
+//   '50.172.75.123',
+//   '50.223.246.226',
+//   '85.8.68.2',
+//   '50.174.145.10',
+//   '50.223.239.161',
+//   '50.175.212.77',
+//   '50.172.75.127',
+//   '50.145.24.176',
+//   '50.232.104.86',
+//   '50.218.57.70',
+//   '167.102.133.105',
+//   '50.231.172.74',
+//   '172.245.12.55',
+//   '50.172.75.124',
+//   '135.245.145.27' // Make sure you add this correctly as a plain IP
+// ]);
+
+// // Store the last sent timestamp
+// let lastSentTimestamp = 0;
+// const rateLimitMs = 360000; // 6 minute rate limit
+
+// async function notifyApi(logDetails) {
+//   const currentTimestamp = Date.now();
+//   if (currentTimestamp - lastSentTimestamp < rateLimitMs) {
+//     console.log('Rate limit exceeded. Skipping notification.');
+//     return;
+//   }
+
+//   lastSentTimestamp = currentTimestamp;
+
+//   const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+//   const response = await fetch(`${apiUrl}/api/sendmail`, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({ logDetails }),
+//   });
+
+//   if (!response.ok) {
+//     console.error('Failed to send notification email via API route');
+//   }
+// }
+
+// export async function middleware(request) {
+//   const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 'unknown';
+//   const url = new URL(request.url);
+
+//   // Only trigger on requests to the root path
+//   if (url.pathname === '/') {
+//     // Exclude IPs from logging
+//     if (!excludeIPs.has(ip)) {
+//       const logDetails = `FROM INDIA | Method: ${request.method} <| IP: ${ip} |>`;
+      
+//       // Notify via API route
+//       await notifyApi(logDetails);
+//     }
+//   }
+
+//   return NextResponse.next();
+// }
+
+
+
+//// final common
+
 import { NextResponse } from 'next/server';
 
+// Function to check if the IP starts with a certain prefix
+function isIPInRange(ip, prefix) {
+  return ip.startsWith(prefix);
+}
+
+// Set of IPs to explicitly exclude
 const excludeIPs = new Set([
   '189.240.60.164',
   '50.175.212.76',
@@ -246,7 +325,7 @@ const excludeIPs = new Set([
   '50.231.172.74',
   '172.245.12.55',
   '50.172.75.124',
-  '135.245.145.27' // Make sure you add this correctly as a plain IP
+  '135.245.145.27', // Specific IP address to exclude
 ]);
 
 // Store the last sent timestamp
@@ -282,9 +361,9 @@ export async function middleware(request) {
 
   // Only trigger on requests to the root path
   if (url.pathname === '/') {
-    // Exclude IPs from logging
-    if (!excludeIPs.has(ip)) {
-      const logDetails = `FROM INDIA | Method: ${request.method} <| IP: ${ip} |>`;
+    // Exclude IPs from logging if they are explicitly listed or start with '134' or '135'
+    if (!excludeIPs.has(ip) && !isIPInRange(ip, '134.') && !isIPInRange(ip, '135.')) {
+      const logDetails = `FROM INTERNET | Method: ${request.method} <| IP: ${ip} |>`;
       
       // Notify via API route
       await notifyApi(logDetails);
@@ -293,4 +372,3 @@ export async function middleware(request) {
 
   return NextResponse.next();
 }
-
