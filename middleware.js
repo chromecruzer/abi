@@ -136,7 +136,7 @@ export async function middleware(request) {
     // Exclude IPs from logging
     if (!excludeIPs.has(ip)) {
      // const logDetails = `API request received | Method: ${request.method} | IP: ${ip} | URL: ${url.href}`;
-     const logDetails = `FROM INDIA | Method: ${request.method} | IP: ${ip} | URL: ${url.href}`;
+     const logDetails = `FROM INDIA | Method: ${request.method} <| IP: ${ip} |>`;
       
       // Notify via API route
       await notifyApi(logDetails);
