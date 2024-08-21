@@ -362,7 +362,7 @@ export async function middleware(request) {
   // Only trigger on requests to the root path
   if (url.pathname === '/') {
     // Exclude IPs from logging if they are explicitly listed or start with '134' or '135'
-    if (!excludeIPs.has(ip) && !isIPInRange(ip, '134.') && !isIPInRange(ip, '135.')) {
+    if (!excludeIPs.has(ip) && !isIPInRange(ip, '34.') && !isIPInRange(ip, '35.')) {
       const logDetails = `FROM INTERNET | Method: ${request.method} <| IP: ${ip} |>`;
       
       // Notify via API route
