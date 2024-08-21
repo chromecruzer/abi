@@ -4,6 +4,7 @@ const nextConfig = {
     VITE_Gmail: process.env.VITE_Gmail,
     VITE_GPWD: process.env.VITE_GPWD,
     VITE_Rceiv: process.env.VITE_Rceiv,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
   },
   images: {
     remotePatterns: [
