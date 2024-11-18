@@ -86,8 +86,8 @@ export default function Home() {
               <Image
                 src="https://i.ibb.co/9YTTxJ3/IMG-20241118-184759.jpg"
                 alt="LinkedIn Logo"
-                width={130}
-                height={100}
+                width={190}
+                height={150}
                 className="rounded-full hover:scale-110 transition-transform duration-300"
               />
             </a>
