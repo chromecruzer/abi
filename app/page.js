@@ -84,7 +84,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4 flex-grow">Connect with me on LinkedIn ▶️▶️</h2>
             <a href="https://www.linkedin.com/in/abirami-a-61ba15281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
               <Image
-                src="https://i.ibb.co/VBz76LS/IMG-20240807-160053.jpg"
+                src="https://i.ibb.co/9YTTxJ3/IMG-20241118-184759.jpg"
                 alt="LinkedIn Logo"
                 width={130}
                 height={100}
