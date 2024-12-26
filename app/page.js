@@ -169,7 +169,7 @@ export default function Home() {
           <section id="skills" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
             <h2 className="text-3xl font-bold mb-4">SKILLS</h2>
             <ul className="list-disc list-inside">
-              <li>Communication skills, time management, SEO-optimization & Digital-Marketing</li>
+              <li>Communication skills, time management, Excel, PowerPoint & PowerBI</li>
             </ul>
           </section>
           <section id="languages" className="my-8 p-6 bg-indigo-700 bg-opacity-50 backdrop-blur-md rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105 text-gray-200">
